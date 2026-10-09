@@ -191,10 +191,9 @@ If you find this code useful, please cite:
 ```bibtex
 @article{wu2026evta0,
   title={Demonstration-Free Success-Probability Reward Learning for Generalist Robot Policies},
-  author={Duo Wu and Haifeng Wang and Rongwei Lu and Jinghe Wang and Tianyi Xiong and Zhimin Wang and Chao Yu and Shuai Ma and Zhi Wang},
+  author={Wu, Duo and Wang, Haifeng and Lu, Rongwei and Wang, Jinghe and Xiong, Tianyi and Wang, Zhimin and Yu, Chao and Ma, Shuai and Wang, Zhi},
   journal={arXiv preprint arXiv:2609.33653},
-  year={2026},
-  url={https://arxiv.org/abs/2609.33653}
+  year={2026}
 }
 ```
 
