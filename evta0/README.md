@@ -197,3 +197,5 @@ If you find this code useful, please cite:
   url={https://arxiv.org/abs/2609.33653}
 }
 ```
+
+> NOTE: The code in this directory is organized by Z.ai (智谱) and approved by Duo Wu.
