@@ -1,0 +1,43 @@
+# eVTA0 default configuration (Qwen3-VL-4B, window 5 / stride 2, LoRA r16).
+
+model:
+  pretrained_path: Qwen/Qwen3-VL-4B-Instruct   # or a local path
+  torch_dtype: bfloat16
+  lora_rank: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  context_window: 5          # w: frames per history window
+  frame_interval: 2          # s: temporal stride between window frames
+  target_horizon: 2          # x_t^+ appends the frame at t + s
+  protocol_version: "eVTA0"
+  prompt_version: "eVTA0"
+  padding_policy: zero_left
+
+data:
+  # Directory scanned recursively for augmented rollout HDF5 files
+  # (see evta0/data.py for the expected schema).
+  hdf5_root: /path/to/rollout_collection
+  sample_step: 15            # stride between training anchors
+  # Optional: train-split manifest (hdf5_path -> held-out trajectory keys)
+  # reproducing the released train/eval split; leave null to train on
+  # everything (or set holdout_ratio).
+  split_manifest: null
+  holdout_ratio: 0.0
+
+train:
+  epochs: 10
+  batch_size: 32
+  lr: 1.0e-5
+  weight_decay: 0.01
+  grad_clip: 0.5
+  target_update_interval: 16 # K: EMA target update every 16 optimizer steps
+  ema_alpha: 0.1             # alpha: target <- alpha * online + (1 - alpha) * target
+  num_workers: 0
+  seed: 42
+
+eval:
+  sample_step: 5             # VOC/VROC anchor subsampling on demonstrations
+  batch_size: 16
+
+output:
+  save_dir: outputs/evta0
