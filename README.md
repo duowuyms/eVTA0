@@ -57,8 +57,8 @@ A typical workflow:
 
 ## Checkpoints and datasets
 
-The LIBERO / MetaWorld checkpoints and the training datasets are released
-alongside this repository. The released checkpoints were serialized under
+The LIBERO / MetaWorld checkpoints as well as the training and evaluation datasets are released
+[here](https://huggingface.co/collections/notmuch2/evta0). The released checkpoints were serialized under
 transformers 5.8.0 / peft 0.19.1; loading them requires
 transformers >= 5.8.0 and peft >= 0.19.1 (see `rlinf-evta0/README.md` for the
 reward-worker environment notes).
