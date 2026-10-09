@@ -49,7 +49,7 @@ A typical workflow:
 2. Train the reward model with TD bootstrapping:
    `python -m evta0.train --config evta0/configs/evta0.yaml`.
 3. Evaluate reward quality: VOC / VROC on demonstrations
-   (`evta0.eval_progress`) and MSE / Kendall tau-a on held-out rollouts
+   (`evta0.eval_progress`) and MSE / Kendall tau-a on eval rollouts
    (`evta0.eval_terminal`).
 4. Train a policy with the reward: apply the `rlinf-evta0/` overlay to the
    pinned RLinf checkout and run GRPO with `r = P(success) - 1`

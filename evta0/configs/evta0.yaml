@@ -18,7 +18,7 @@ data:
   # (see evta0/data.py for the expected schema).
   hdf5_root: /path/to/rollout_collection
   sample_step: 15            # stride between training anchors
-  # Optional: train-split manifest (hdf5_path -> held-out trajectory keys)
+  # Optional: split manifest (hdf5_path -> eval trajectory keys)
   # reproducing the released train/eval split; leave null to train on
   # everything (or set holdout_ratio).
   split_manifest: null

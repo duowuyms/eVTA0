@@ -87,7 +87,7 @@ class EVTA0TrajectoryDataset(Dataset):
         target_horizon: how many frames ahead the bootstrap target looks (2,
             i.e. one stride -- x_t^+ is x_t plus the frame at t+s).
         exclude: optional mapping ``{hdf5_path -> {traj_key, ...}}`` of
-            rollouts held out of training (e.g. the evaluation split).
+            rollouts excluded from training (the eval split).
     """
 
     hdf5_root: str
@@ -168,7 +168,7 @@ class EVTA0TrajectoryDataset(Dataset):
         * the CSV trajectory split shipped with the dataset release
           (``file,traj_key,split,success`` -- rows with ``split == "eval"``
           are excluded; ``file`` is relative to the collection root);
-        * a JSON manifest with per-task held-out keys
+        * a JSON manifest with per-task eval keys
           (``tasks[].excluded_table_eval_traj_keys`` or
           ``tasks[].eval_traj_keys``), reproducing the released split.
         """
