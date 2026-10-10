@@ -4,6 +4,10 @@ Hi! This is the official repository of the paper
 ["Demonstration-Free Success-Probability Reward Learning for Generalist Robot
 Policies"](https://arxiv.org/abs/2609.33653).
 
+**Project:** https://duowuyms.github.io/evta0/
+
+**Paper:** https://arxiv.org/abs/2609.33653
+
 ## Abstract
 
 Reinforcement learning (RL) enables generalist robot policies to improve
